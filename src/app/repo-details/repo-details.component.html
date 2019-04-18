@@ -1,0 +1,15 @@
+
+            <p class="lead" *ngIf = "edit" style = "text-align : center;">ALL REPOS </p>
+    <div class ="list-group" *ngFor = "let item of allrepos ; let i = index">
+        <li class = "list-group-item">   
+        <p>
+        <strong>FULLNAME</strong> : {{item.fullname}} <span> <strong>NAME</strong>  : {{item.name}} </span>  
+        <span> <strong>DESCRIPTION</strong> : {{item.description}} </span> 
+        <span> <strong>FORK</strong> : {{item.fork}} </span>
+        <span> <strong>CREATED AT</strong> : {{item.created}} </span> 
+        <span> <strong>SIZE</strong> : {{item.size}} </span>
+        <span> <strong>LANGUAGE</strong> : {{item.language}} </span>
+        
+        </p>  <button type = "button" (click) = "onselect(i)" class = "btn btn-success btn-xs">PICk</button> </li>
+        
+    </div>
